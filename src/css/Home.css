@@ -1,0 +1,122 @@
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1135px) {
+  }
+}
+
+.homepage p {
+  font-family: "Geist-Server-Bold";
+  font-size: 275px;
+  color: #fff;
+
+  @media screen and (max-width: 1135px) {
+    font-size: 24vw;
+  }
+}
+
+.homepage .grid {
+  background: radial-gradient(circle at center, #383838, #383838, #000, #000);
+
+  @media screen and (max-width: 1135px) {
+    width: 150vw;
+  }
+
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+
+  display: flex;
+  gap: 1px;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homepage .grid div {
+  aspect-ratio: 1;
+  height: 10vh;
+  background-color: #000;
+}
+
+.homepage .dock {
+  position: absolute;
+
+  bottom: 5%;
+}
+
+.homepage .countdown {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  animation-name: fadeInCountdown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.homepage .countdown p {
+  font-family: "Geist-Server-Bold";
+  font-size: 6vw;
+}
+
+.homepage .countdown-element {
+  display: flex;
+}
+
+.homepage .countdown .odometer {
+  font-family: "Geist-Server-Bold-Mono";
+  font-size: 6vw;
+  color: #fff;
+  transform: translate(0, -3%);
+}
+
+.homepage .countdown span {
+  font-family: "Geist-Server-Bold-Mono";
+  font-size: 6vw;
+  color: #fff;
+}
+
+.homepage .disabled {
+  animation-name: fadeOutCountdown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutCountdown {
+  0% {
+    filter: opacity(100%);
+    backdrop-filter: blur(20px);
+  }
+  99% {
+    filter: opacity(0%);
+    backdrop-filter: blur(0px);
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@keyframes fadeInCountdown {
+  0% {
+    display: flex;
+    filter: opacity(0%);
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    filter: opacity(100%);
+    backdrop-filter: blur(20px);
+  }
+}

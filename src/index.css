@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Geist-Server";
+  src: local("MyFont"), url(./fonts/Geist-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Server-Bold";
+  src: local("MyFont"), url(./fonts/Geist-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Server-Bold-Mono";
+  src: local("MyFont"), url(./fonts/GeistMono-Bold.otf) format("truetype");
+}
